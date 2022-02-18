@@ -12,12 +12,12 @@ function Calculate(value)
     document.getElementById("loader").style.display = "block";
     sleep(200).then(() => {
         if(Math.random() < 0.5)
-    {
-        var newValue = parseInt(sessionStorage.getItem("balance")) + parseInt(value);
-        sessionStorage.setItem("balance", newValue);
-        var newBalanceString = `Balance: ${newValue}`;
-        document.getElementById('balance').innerHTML = newBalanceString;
-    }
+        {
+            var newValue = parseInt(sessionStorage.getItem("balance")) + parseInt(value);
+            sessionStorage.setItem("balance", newValue);
+            var newBalanceString = `Balance: ${newValue}`;
+            document.getElementById('balance').innerHTML = newBalanceString;
+        }
     document.getElementById("loader").style.display = "none";
 });
 }
