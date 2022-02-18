@@ -3,6 +3,7 @@
     <head>
       <title>Express HTML</title>
       <script src="logic.js"></script>
+      <link rel="stylesheet" type="text/css" href="mycss.css" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
@@ -14,7 +15,10 @@
             <p><a class="btn btn-primary btn-lg" href="#" id="balance" role="button">Balance: $0</a></p>
         </div>
         <div style="margin-left: 45px;">
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Withdraw</a></p>
+            <p><a class="btn btn-primary btn-lg" href="javascript:ResetBalance()" role="button">Withdraw</a></p>
+        </div>
+        <div style="margin-left: 400px;">
+            <div id="loader" class="loader"></div>
         </div>
         <div style="margin-left: 400px;">
             <p><a class="btn btn-primary btn-lg" href="javascript:Calculate(1);" role="button">1$ ticket</a></p>
