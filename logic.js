@@ -16,14 +16,14 @@ function Calculate(value)
         {
             var newValue = parseFloat(sessionStorage.getItem("balance")) + parseFloat(value);
             sessionStorage.setItem("balance", newValue);
-            var newBalanceString = `Balance: ${newValue}`;
+            var newBalanceString = `Balance: $${newValue}`;
             document.getElementById('balance').innerHTML = newBalanceString;
             document.getElementById('status').innerHTML = "Win";
         }
         else{
             var newValue = parseFloat(sessionStorage.getItem("balance")) + 0.01;
             sessionStorage.setItem("balance", newValue);
-            var newBalanceString = `Balance: ${newValue}`;
+            var newBalanceString = `Balance: $${newValue}`;
             document.getElementById('balance').innerHTML = newBalanceString;
             document.getElementById('status').innerHTML = "Lose";
         }
@@ -34,7 +34,7 @@ function Calculate(value)
 function ResetBalance()
 {
     sessionStorage.setItem("balance", 0.00);
-    var newBalanceString = `Balance: ${0}`;
+    var newBalanceString = `Balance: $${0}`;
     document.getElementById('balance').innerHTML = newBalanceString;
-    document.getElementById('status').innerHTML = "";
+    document.getElementById('status').innerHTML = "Status";
 }
